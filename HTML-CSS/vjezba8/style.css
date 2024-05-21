@@ -1,0 +1,39 @@
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 20px;
+  color: navy;
+  background-color: beige;
+}
+
+header {
+  background-color: #ccc;
+}
+
+nav {
+  background-color: green;
+}
+
+main {
+  background-color: skyblue;
+}
+
+footer {
+  background-color: rgb(0, 255, 255);
+}
+
+h1 {
+  background-color: rgba(150, 150, 150, 0.5);
+}
+
+.pozadina {
+  color: #000;
+  background-color: #333;
+  background-image: url(./butterfly.png);
+  background-repeat: no-repeat; /* repeat | no-repeat | repeat-x | repeat-y */
+  background-position: center center; /* [position-x], [position-y] */
+  background-attachment: scroll; /* scroll | fixed */
+  background-size: 25%; /* auto | length | cover | contain */
+
+  /* background: bg-color bg-image position/bg-size bg-repeat bg-attachment */
+  background: #333 url(./butterfly.png) center center/25% no-repeat scroll;
+}

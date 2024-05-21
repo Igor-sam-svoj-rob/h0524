@@ -1,0 +1,65 @@
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  color: red;
+}
+
+p {
+  color: green;
+}
+
+/* 16px - 1em ili 1rem */
+
+p {
+  font-size: 1.5em;
+  /* 1.5 * 16px = 24px */
+}
+
+p {
+  font-size: 1.17em;
+  /* 1.17 * 16px = 18.72px */
+}
+
+/* REM (root-em) način definiranja veličine fonta će se uvijek adresirati na root element HTML-a (html element) i kako je na njemu podešeno
+tako će on računati svoju veličinu. Po defaultu veličina je 16 px ili 100%.  */
+p {
+  font-size: 2rem;
+}
+
+/* EM način definiranja veličine fonta će se adresirati na root element HTML-a (html element) i kako je nja njemu podešeno
+samo ako u hijerarhiji iznad sebe ne naiđe na element na kojem je definiran font. */
+
+p {
+  font-size: 2em;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------- */
+
+/* Manipulacije teksta */
+
+/* 
+tekst dekoracije (vrsta linije) i njihova svojstva : underline, overline, line-through, overline underline 
+tekst dekoracije (stil linije) i njegova svojstva: solid, double, dotted, dashed, wavy
+*/
+
+h1 {
+  text-decoration-line: overline underline;
+  text-decoration-style: solid;
+
+  /* Možemo kombinirati ovo kao one-liner */
+  text-decoration: underline wavy blue;
+
+  /* tekst transformacija može biti none (po defaultu kakva i je), capitalize, uppercase, lowercase */
+  text-transform: uppercase;
+
+  /* text-align : left, center, right, justify */
+  text-align: left;
+}
+
+p {
+  text-align: justify;
+  /* Line height možete definirati kao : px, %, rem/em, broj */
+  line-height: 1.2;
+}

@@ -1,0 +1,79 @@
+body {
+  font-size: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+div,
+p {
+  background-color: bisque;
+}
+
+/* Širine */
+
+.width1 {
+  width: 50%;
+  /* border: border-width border-style border-color */
+  border: 2px solid #333;
+}
+
+.width2 {
+  /* border-style: none | hidden | solid | dashed | dotted | double | groove | ridge | inset | outset */
+  border: 10px solid pink;
+  width: 500px;
+}
+
+.width3 {
+  border-top: 10px solid #333;
+  border-right: 10px dashed #f33;
+  border-bottom: 10px dotted #33f;
+  border-left: 10px double #3f3;
+  width: 25rem;
+  height: 200px;
+}
+
+/* Visine */
+
+/* postotna visina ima smisla jedino ako je na parent elementu
+ fiksno definirana visina */
+
+.height1 {
+  height: 50%;
+}
+
+.height2 {
+  height: 150px;
+}
+
+.height3 {
+  height: 5rem;
+}
+
+/* Padding i margin */
+
+.padding {
+  /* 
+  Ako napišete kao jednu vrijednost, primjenjuje se u sva 4 smjera.
+  Ako napišete 2 vrijednosti, primjenjuje se u 2 smjera. Prva vrijednost je za gore/dolje, a druga za lijevo/desno.
+  Ako napišete 3 vrijednosti, prva je gornja, druga je lijevo/desno, treća je dolje.
+  Ako napišete 4 vrijednosti, prva je gornja, druga je desna, treća je donja, četvrta je lijeva.
+   */
+  padding: 10px 20px 30px 40px;
+
+  /* Ovo bi bilo definiranje isključivo po željenom smjeru. */
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+}
+
+.margin {
+  margin: 20px;
+}
+
+.auto {
+  width: 100px;
+  margin: auto;
+}

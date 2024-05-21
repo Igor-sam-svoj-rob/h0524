@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio/video i linkovi</title>
+  </head>
+  <body>
+    <h1>Multimedijski sadržaji u HTML-u</h1>
+    <!-- Jednostavniji način koji ima mane ako klijentov browser ne može učitati tu vrstu podatka -->
+    <audio src="./in3s.mp3" controls></audio>
+
+    <!-- Dulji ali detaljniji način koji rješava nedostatke prvog pristupa -->
+    <audio controls>
+      <source src="./in3s.mp3" type="audio/mp3" />
+    </audio>
+
+    <!-- Jednostavniji način koji ima mane ako klijentov browser ne može učitati tu vrstu podatka -->
+    <video src="./mountains.mp4" controls width="680" height="400"></video>
+    <!-- Dulji ali detaljniji način koji rješava nedostatke prvog pristupa -->
+    <video controls>
+      <source src="./mountains.mp4" type="video/mp4" />
+      <source src="./mountains.webm" type="video/webm" />
+    </video>
+
+    <!-- LINKOVI -->
+    <a href="./index.html">Link na test.html</a>
+    <a href="https://www.google.com/" target="_blank">Apsolutni link na google</a>
+    <!-- Sidro link -->
+    <a href="#sidro">Link na h2</a>
+    <a href="./test.html#sidro">Sidro na ID na test.html stranici</a>
+    <!-- Sidro link prema vanjskoj adresi -->
+    <a href="https://www.algebra.hr/#siteFoot">Link na Algebrinu stranicu i njen footer...</a>
+    <!-- Odredišna točka našeg anchor ID linka -->
+    <h2 id="sidro">Heading za naš anchor tag</h2>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi consectetur earum facilis,
+      quos maiores beatae minus quam, animi tempore consequatur iusto vel a sunt id ipsa inventore
+      eligendi rem dicta hic? Doloribus reiciendis minima consequuntur voluptas tenetur natus nobis
+      facere. Impedit quia voluptatum architecto, harum necessitatibus dolores doloribus hic
+      reprehenderit aspernatur, itaque ea nobis magni labore qui animi, possimus ad natus fugiat
+      nesciunt error quisquam autem numquam. Laborum odit autem eligendi adipisci sint. Nam dolorem,
+      dicta soluta obcaecati consectetur neque, dolor quos laborum beatae nihil iste magni. Ipsam
+      libero ratione adipisci asperiores vel incidunt modi sunt facere quibusdam hic dicta laborum
+      rerum amet, blanditiis provident cum eligendi placeat qui maxime non dolorum? Ab accusamus
+      repellendus magnam? Dolore quidem repellendus non, quasi necessitatibus reprehenderit
+      repudiandae illo iste natus quos dignissimos quo veritatis, quam obcaecati illum cumque
+      commodi ipsum aperiam iure aliquam! Corporis sed ex, minus voluptatem harum magnam
+      repellendus, natus eligendi incidunt, placeat aut aperiam? Qui sunt repellat tempora suscipit
+      delectus ipsam accusantium unde possimus illo beatae, quis vero. Id quae ex facere ducimus
+      quasi eius obcaecati, a consectetur aspernatur cum, animi sit tenetur reiciendis iusto ipsam
+      aliquid explicabo eos dolore quisquam veniam maxime necessitatibus nisi recusandae aut? Vero
+      odio repudiandae porro, illum animi earum necessitatibus est magni velit quidem, eaque vitae
+      adipisci unde fugiat a eius iure laboriosam. Dolor qui architecto itaque vitae sunt id aperiam
+      dolores quae, placeat fugiat voluptate error eos, exercitationem, alias excepturi unde totam
+      earum? Blanditiis magni repellendus repudiandae aperiam autem, officiis consequatur corrupti,
+      architecto, itaque delectus cum quasi nulla dolor? Laboriosam blanditiis quis soluta nam odio
+      quae, debitis aliquam ipsa doloribus rem temporibus reprehenderit molestiae reiciendis
+      voluptatem aliquid voluptas. In earum consectetur, molestiae tempore aliquam voluptate
+      doloribus eaque quos totam iste iusto quaerat aperiam deserunt fugit debitis consequuntur
+      voluptatem assumenda voluptates! Amet corporis illo nemo a provident libero, accusantium,
+      perferendis repellat iure, autem reiciendis dicta quasi deserunt placeat totam ab veritatis
+      aliquam maiores? Asperiores, soluta accusantium! Omnis perspiciatis dignissimos possimus
+      accusantium incidunt assumenda modi voluptas quas, iste dicta excepturi repellendus maxime
+      sunt, fuga quod dolore corporis corrupti provident distinctio. Dolorum enim dolorem at minus,
+      eius id distinctio eligendi harum dolores. Nihil deserunt, cupiditate unde, placeat voluptates
+      at voluptatum porro quasi repellendus odit dolorem, doloremque voluptatem ullam vero vel
+      exercitationem magnam quibusdam libero recusandae! Error culpa vel maxime ab voluptate! Minus
+      quo consectetur, voluptate laudantium fugiat assumenda nesciunt, magnam cupiditate dignissimos
+      a corporis, nulla voluptas labore id possimus voluptates amet laborum iste temporibus saepe
+      atque? Eligendi nobis hic reprehenderit, minus accusamus porro exercitationem sed, aliquid
+      animi quia debitis! Voluptates nihil optio laboriosam minima quis tempora molestias? Dolore
+      vero, dicta, nostrum a, reprehenderit quas magnam facilis dolorem quibusdam temporibus eos
+      qui! Esse, culpa commodi dolores quibusdam doloremque quaerat veritatis quis cum voluptate
+      laboriosam a, eum odio! Omnis, modi veritatis. Hic odit perferendis quam fuga et delectus
+      labore qui maxime sed possimus! Vitae inventore expedita, ipsam unde a praesentium fugit sequi
+      adipisci, magni corporis, minus quia incidunt nesciunt error. Provident ad alias quaerat esse
+      cupiditate fuga voluptatibus molestiae!
+    </p>
+    <p>
+      E-mail:
+      <a href="mailto:pero.peric@gmail.com?subject=Poruka sa web stranice">pero.peric@gmail.com</a>
+    </p>
+    <p>Tel: <a href="tel:+38595000111">095/000 111</a></p>
+
+    <p>Slika kao link:</p>
+    <a href="https://www.w3schools.com/html/default.asp" target="_blank"
+      ><img src="./html5.png" alt="html-logo" height="50"
+    /></a>
+  </body>
+</html>

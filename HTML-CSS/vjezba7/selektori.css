@@ -1,0 +1,22 @@
+/* Jednostavni selektori - html element, klase i ID-evi */
+
+h1,
+h2 {
+  color: red;
+}
+
+.naslovh3 {
+  color: green;
+}
+
+#drugi-odlomak {
+  color: blue;
+}
+
+p:first-of-type {
+  color: orange;
+}
+
+body > p:last-child {
+  color: brown !important;
+}
