@@ -1,0 +1,28 @@
+.contact {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://unsplash.it/1920/1080);
+  @include FlexContainer(center, center, 1rem);
+  text-align: center;
+  flex-direction: column;
+
+  h1 {
+    color: #fff;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    @include FlexContainer(center, center, 1rem);
+    margin-bottom: 1rem;
+
+    &--item {
+      color: #fff;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.footer__contact {
+  justify-content: flex-end;
+}

@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.item {
+  border: 2px solid red;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+/* Zadatak 1 */
+.zadatak1 {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* Zadatak 2 */
+
+.zadatak2 {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  align-items: center;
+}
+
+.visina50 {
+  height: 50vh;
+}
+
+.zadatak2 > .visina50:first-child {
+  grid-column: 2 / 6;
+}
+
+.zadatak2 > .visina50:last-child {
+  grid-column: 6 / 12;
+}
+
+/* Zadatak 3-1 */
+
+.zadatak31 {
+  display: grid;
+  height: 100vh;
+  gap: 2rem;
+  grid-template-rows: repeat(2, auto) 1fr auto;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.zadatak31 header,
+.zadatak31 footer {
+  grid-column: 1 / -1;
+}
+
+.zadatak31 nav {
+  grid-column: 5 / 10;
+}
+
+.zadatak31 main {
+  grid-column: 5 / 10;
+}
+
+.zadatak31 section {
+  grid-column: 1 / 5;
+  grid-row: 2 / -2;
+}
+
+.zadatak31 aside {
+  grid-column: 10 / -1;
+  grid-row: 2 / -2;
+}
+
+/* Zadatak 4 */
+
+.zadatak4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 2rem;
+}
+
+/* Zadatak 5 */
+
+.zadatak5 {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.zadatak5 > .item4 {
+  grid-column: 1/ 4;
+  grid-row: 1/4;
+}
+
+.zadatak5 > .item3 {
+  grid-column: 4/ 7;
+  grid-row: 4/7;
+}
+
+.zadatak5 > .item2 {
+  grid-column: 7/ 10;
+  grid-row: 7/10;
+}
+
+.zadatak5 > .item1 {
+  grid-column: 10/ 13;
+  grid-row: 10/13;
+}

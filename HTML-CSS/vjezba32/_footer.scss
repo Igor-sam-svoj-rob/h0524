@@ -1,0 +1,29 @@
+footer {
+  position: fixed;
+  bottom: 1rem;
+  width: 100%;
+  color: #fff;
+  font-size: 1.6rem;
+  @include FlexContainer(space-between, center, 0);
+  padding: 2rem;
+}
+
+.social__icons {
+  display: flex;
+  @include FlexContainer(center, center, 2rem);
+
+  a {
+    color: #fff;
+    font-size: 3rem;
+  }
+}
+
+.footer__okomit {
+  .social__icons {
+    flex-direction: column;
+  }
+
+  p {
+    transform: rotate(90deg) translate(5rem, -5rem);
+  }
+}

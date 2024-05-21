@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import "colors";
+
+// način definiranja varijable u SCSS-u
+$primary-color: #333;
+
+// način pozivanja varijable u SCSS-u
+body {
+  color: $primary-color;
+  background-color: $siva;
+}
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}

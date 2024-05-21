@@ -1,0 +1,632 @@
+:root {
+  --tamna-pozadina: #212429;
+  --crna: #212121;
+  --sivi-tekst: #464646;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f9f9fb;
+}
+
+h1 {
+  font-size: 2.7rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+img {
+  width: 100%;
+}
+
+/* Header i navigacija */
+
+header {
+  background-color: var(--tamna-pozadina);
+}
+
+nav {
+  width: 94%;
+  margin: 0 auto;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+i[class|="fa"] {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+nav i {
+  padding: 2.2rem;
+  border-right: 1px solid #3b3b3c;
+  transition: color 0.5s linear;
+}
+
+nav i:first-child {
+  border-left: 1px solid #3b3b3c;
+}
+
+nav i:hover {
+  color: #999;
+}
+
+nav > a {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+/* Izbornik */
+
+.main-nav {
+  list-style: none;
+  position: absolute;
+  top: -100%;
+  background-color: var(--tamna-pozadina);
+  width: 94%;
+}
+
+.main-nav.active {
+  top: 6rem;
+}
+
+.main-nav li {
+  margin: 1rem;
+}
+
+.menu-toggle {
+  width: 6.5rem;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.5s ease;
+}
+
+.main-nav a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+/* Hero sekcija */
+
+.hero {
+  background: linear-gradient(var(--tamna-pozadina) 50%, #f9f9fb 50%);
+}
+
+.hero__content {
+  width: 94%;
+  margin: 0 auto;
+  min-height: 70vh;
+  background: url(./slike/naslovna.jpg) no-repeat center center/cover fixed;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 8%;
+  letter-spacing: 5px;
+}
+
+.hero--title {
+  margin-bottom: 8rem;
+  margin-top: 2.5rem;
+}
+
+.hero--subtitle {
+  order: -1;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.hero--button {
+  background-color: #fff;
+  width: 18rem;
+  height: 7rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: background 1s linear, color 1.5s ease;
+}
+
+.hero--button:hover {
+  background: var(--tamna-pozadina);
+  color: #fff;
+}
+
+/* Search sekcija */
+
+.search {
+  width: 94%;
+  margin: 2.7rem auto;
+  display: flex;
+  font-size: 1.6rem;
+}
+
+.search p {
+  flex-basis: 17%;
+  letter-spacing: 3px;
+  font-weight: 700;
+  line-height: 6rem;
+}
+
+.search form {
+  flex-basis: 83%;
+  display: flex;
+}
+
+.search form::before {
+  content: "\f002";
+  font: var(--fa-font-solid);
+  color: #fff;
+  background-color: var(--tamna-pozadina);
+  line-height: 6rem;
+  width: 6rem;
+  text-align: center;
+}
+
+.search input[type="text"] {
+  flex-basis: 80%;
+  margin-right: 2rem;
+}
+
+.search input[type="text"]::placeholder {
+  color: #bbb;
+  padding-left: 2rem;
+}
+
+.search input[type="submit"] {
+  flex-basis: 20%;
+  background-color: var(--tamna-pozadina);
+  color: #fff;
+  cursor: pointer;
+  transition: background 1s linear, color 1.5s ease;
+}
+
+.search input[type="submit"]:hover {
+  background: #eee;
+  color: var(--tamna-pozadina);
+}
+
+/* Kartična sekcija */
+
+.index-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
+  gap: 3.5rem;
+  width: 94%;
+  margin: 2.7rem auto;
+}
+
+.kartica {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  background-color: #fff;
+  border: 1px solid #f8f8f9;
+}
+
+.kartica__info {
+  text-align: center;
+}
+
+.kartica__info img {
+  margin-bottom: 6.5rem;
+}
+
+.kartica__info h2 {
+  font-size: 2.5rem;
+  margin: 2.4rem 0;
+}
+
+.kartica__info p {
+  color: var(--sivi-tekst);
+  font-size: 1.6rem;
+}
+
+.kartica__info button {
+  border-left: 2px solid #e3e3e3;
+  border-right: 2px solid #e3e3e3;
+  letter-spacing: 3px;
+  cursor: pointer;
+  background: transparent;
+  margin: 4.5rem 0;
+  padding: 2rem;
+  font-weight: 700;
+  transition: background 1s ease;
+}
+
+.kartica__info button:hover {
+  background: #e3e3e3;
+}
+
+.kartica__social {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #f8f8f9;
+  padding: 3rem 0;
+  font-size: 2rem;
+}
+
+.kartica__social p,
+.kartica--icons {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.kartica__info p:first-child {
+  margin-top: 4.5rem;
+}
+
+.kartica--bez-slike {
+  color: #464646;
+  margin-top: 4.5rem;
+  letter-spacing: 2px;
+  line-height: 2;
+  padding: 0 2rem;
+}
+
+.tamna-kartica {
+  background-color: var(--tamna-pozadina);
+  padding-bottom: 2rem;
+}
+
+.tamna-kartica .kartica--bez-slike {
+  color: #fff;
+  margin-bottom: 4.5rem;
+}
+
+/* Footer sekcija */
+
+footer {
+  background-color: var(--tamna-pozadina);
+}
+
+.footer-container {
+  width: 94%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
+  gap: 3.5rem;
+  padding-top: 7rem;
+  color: #fff;
+}
+
+.footer-container h2 {
+  margin-bottom: 4.5rem;
+}
+
+.footer-container p {
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+.footer-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3px;
+}
+
+footer hr {
+  margin: 3rem 0;
+  border: 1px solid #6a6b6d;
+}
+
+.copyright {
+  background-color: #17191c;
+  text-align: center;
+  color: #6a6b6d;
+  font-size: 1.6rem;
+  line-height: 2;
+  padding: 1rem 0;
+}
+
+.copyright a {
+  text-decoration: none;
+  color: #6a6b6d;
+}
+
+/* About stranica - main */
+
+.about-main {
+  width: 94%;
+  margin: 11rem auto;
+  display: flex;
+  gap: 3rem;
+  font-size: 1.6rem;
+}
+
+.about-article {
+  flex-basis: 75%;
+  background-color: #fff;
+  text-align: center;
+}
+
+.about-naslov {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8rem;
+}
+
+.about-naslov h1 {
+  margin: 3.5rem 0;
+}
+
+.about-naslov p {
+  order: -1;
+  color: #9a9a9a;
+}
+
+.about-info-kartica {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+.about-info-kartica p {
+  color: #9a9a9a;
+}
+
+.about-info-kartica i {
+  color: #464646;
+  margin-right: 1rem;
+}
+
+.about-article > p {
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 4.5rem;
+  line-height: 1.5;
+  color: #464646;
+  padding: 0 7rem;
+}
+
+.about-article blockquote {
+  letter-spacing: 2px;
+  margin: 0 20% 4.5rem;
+  line-height: 1.5;
+}
+
+/* About - aside sekcija */
+
+.about-aside {
+  flex-basis: 25%;
+  background-color: #fff;
+  padding: 4.5rem 3.5rem 3rem;
+}
+
+.about-aside form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  margin-bottom: 5.5rem;
+}
+
+.about-aside input[type="text"] {
+  background-color: #f9f9fb;
+}
+
+.about-aside input[type="text"]::placeholder {
+  padding-left: 1rem;
+}
+
+.about-aside input[type="submit"] {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  padding: 2rem;
+  background-color: var(--crna);
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.category-links {
+  display: flex;
+  justify-content: space-between;
+  line-height: 3;
+  border-bottom: 1px solid #f8f8f8;
+}
+
+.category-links a,
+.category-links span {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.category-links a:hover,
+.category-links span:hover {
+  border-bottom: 1px solid black;
+}
+
+aside h2 {
+  text-align: center;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #f8f8f8;
+  margin-bottom: 3.5rem;
+}
+
+.posts {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid #f8f8f8;
+  width: 300px;
+}
+
+.posts img {
+  width: 100px;
+}
+
+.text-container {
+  display: grid;
+  align-items: center;
+}
+
+.text-container-desc {
+  display: flex;
+  gap: 3rem;
+  color: var(--sivi-tekst);
+}
+
+.posts:last-child {
+  border-bottom: none;
+}
+
+/* Contact stranica - Main lijeva sekcija */
+
+.contact-main {
+  width: 94%;
+  margin: 11rem auto;
+  display: flex;
+  gap: 3rem;
+}
+
+.contact-article {
+  flex-basis: 75%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto 1fr;
+  row-gap: 3rem;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-main-info {
+  background-color: #fff;
+  padding: 4rem 3rem;
+}
+
+.contact-main-info h1 {
+  font-size: 2rem;
+}
+
+.contact-main-info p {
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+.contact-main-info hr {
+  border: 1px solid #eaeaeb;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.contact-main-info i {
+  margin-right: 1rem;
+  margin-top: 2rem;
+}
+
+.contact-form-section {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 50px) 250px 40px;
+  gap: 2.5rem;
+}
+
+.contact-form-section input[type="url"],
+.contact-form-section textarea {
+  grid-column: 1 / -1;
+}
+
+.contact-form-section input,
+.contact-form-section textarea {
+  padding-left: 1rem;
+  font-size: 1.6rem;
+  line-height: 5rem;
+}
+
+.contact-form-section input::placeholder,
+.contact-form-section textarea::placeholder {
+  color: #424242;
+  text-transform: uppercase;
+}
+
+.contact-form-section input[type="submit"] {
+  background-color: var(--tamna-pozadina);
+  color: #fff;
+  cursor: pointer;
+  max-width: 170px;
+  line-height: 4rem;
+  padding-left: 0;
+  transition: background 0.3s ease, color 0.6s ease;
+}
+
+.contact-form-section input[type="submit"]:hover {
+  background: #fff;
+  color: var(--tamna-pozadina);
+}
+
+@media all and (max-width: 1300px) {
+  .search p {
+    flex-basis: 30%;
+  }
+
+  .search form {
+    flex-basis: 70%;
+  }
+}
+
+@media all and (max-width: 981px) {
+  nav > a {
+    position: static;
+    transform: none;
+  }
+
+  .search input[type="text"] {
+    flex-basis: 65%;
+  }
+
+  .search input[type="submit"] {
+    flex-basis: 35%;
+  }
+
+  .about-main,
+  .contact-main {
+    flex-direction: column;
+  }
+
+  .latest-posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .latest-posts img {
+    grid-row: 1 / -1;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .search {
+    flex-direction: column;
+  }
+  .search p {
+    text-align: center;
+  }
+}

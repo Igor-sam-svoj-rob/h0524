@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+div {
+  background-color: darkgreen;
+  border: 1px solid black;
+  width: 300px;
+  height: 50px;
+  margin: 4rem auto;
+}
+
+/* Transition: svojstvo i trajanje */
+div:first-of-type {
+  transition: width 2s;
+}
+
+div:first-of-type:hover {
+  width: 400px;
+}
+
+div:nth-of-type(2) {
+  transition: background 0.5s;
+}
+
+div:nth-of-type(2):hover {
+  background: red;
+}
+
+div:nth-of-type(3) {
+  transition: transform 1.5s;
+}
+
+div:nth-of-type(3):hover {
+  transform: translate(300px, 100px);
+}
+
+/* odgoda i vrsta animacije */
+
+div:nth-of-type(4) {
+  transition: background 1s ease 2s;
+}
+
+div:nth-of-type(4):hover {
+  background: red;
+}
+
+div:nth-of-type(5) {
+  transition: opacity 0.6s;
+}
+
+div:nth-of-type(5):hover {
+  opacity: 0.5;
+}
+
+/* više transizicija odjednom */
+
+div:nth-of-type(6) {
+  transition: background 1s cubic-bezier(0.26, 1.56, 0.75, -0.18), transform 0.5s ease-in-out;
+}
+
+div:nth-of-type(6):hover {
+  background: red;
+  transform: scalex(1.5);
+  opacity: 0.5;
+}

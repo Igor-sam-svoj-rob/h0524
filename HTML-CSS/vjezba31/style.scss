@@ -1,0 +1,47 @@
+@import "media";
+
+$boja1: #eee;
+$boja2: black;
+$boja3: red;
+$boja4: blue;
+$boja5: lightblue;
+$font: Verdana, sans-serif;
+
+@mixin FlexContainer($justify, $align, $gap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin MarginBorder($margin, $border) {
+  margin: $margin;
+  border: $border;
+}
+
+/* Extend služi za situacije kada nema potrebe za ulaznim parametrima */
+
+%aGumb {
+  a {
+    background-color: $boja2;
+    color: $boja5;
+    text-decoration: none;
+    padding: 1rem 2rem;
+
+    &:hover {
+      color: $boja1;
+    }
+  }
+}
+
+header,
+footer {
+  @include FlexContainer(center, center, 1rem);
+  flex-direction: column;
+  @extend %aGumb;
+}
+
+main {
+  @include FlexContainer(center, center, 2rem);
+  @extend %aGumb;
+}

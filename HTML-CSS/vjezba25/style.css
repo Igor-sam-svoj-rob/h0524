@@ -1,0 +1,53 @@
+/* Selektori atributa selektiraju atribute na HTML elementima. */
+
+/* 1. Selektor atributa koji selektira sve elemente koji imaju
+ title atribut na sebi. */
+[title] {
+  text-decoration: underline solid red;
+}
+
+/* Selektor atributa koji selektira sve paragrafe koji imaju
+title atribut na sebi */
+p[title] {
+  text-decoration: underline solid green;
+}
+
+/* Selektor atributa koji selektira element koji ima title
+atribut sa točno određenom vrijednosti... */
+[title="prvi odlomak"] {
+  color: red;
+}
+
+/* Selektor atributa koji selektira element koji ima title
+atribut a tražena vrijednost je izraz koji se može pojaviti
+bilo gdje u vrijednosti atributa... */
+[title*="odlomak"] {
+  color: blue;
+}
+
+/* Selektor atributa koji selektira element koji ima title
+atribut a tražena vrijednost je izraz koji je odvojen razmakom
+i može se nalaziti bilo gdje u vrijednosti atributa */
+[title~="odlomak"] {
+  color: hotpink;
+}
+
+/* Selektor atributa koji selektira element koji ima title
+atribut a tražena vrijednost je izraz s kojim počinje
+vrijednost tog atributa.... */
+[title^="odlomak"] {
+  color: red;
+}
+
+/* Selektor atributa koji selektira element koji ima title
+atribut a tražena vrijednost atributa je odvojena minusom. */
+[title|="odlomak"] {
+  color: brown;
+}
+
+/* Selektor atributa koji selektira element koji ima title
+atribut a tražena vrijednost atributa je izraz s kojim 
+završava vrijednost tog atributa... */
+[title$="odlomak"] {
+  color: darkorange;
+}

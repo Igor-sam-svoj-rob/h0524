@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/* Extend služi za situacije kada nema potrebe za ulaznim parametrima */
+main a, header a,
+footer a {
+  background-color: black;
+  color: lightblue;
+  text-decoration: none;
+  padding: 1rem 2rem;
+}
+main a:hover, header a:hover,
+footer a:hover {
+  color: #eee;
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}

@@ -1,0 +1,1 @@
+main a,header a,footer a{background-color:#000;color:#add8e6;text-decoration:none;padding:1rem 2rem}main a:hover,header a:hover,footer a:hover{color:#eee}header,footer{display:flex;justify-content:center;align-items:center;gap:1rem;flex-direction:column}main{display:flex;justify-content:center;align-items:center;gap:2rem}
