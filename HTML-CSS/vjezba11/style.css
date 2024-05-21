@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+}
+
+.box1 {
+  background-color: green;
+}
+
+.box2 {
+  background-color: brown;
+}
+
+.box1 {
+  position: relative;
+  top: 100px;
+  left: 100px;
+  z-index: 1;
+}
+
+.box2 {
+  position: sticky;
+  top: 50px;
+}
+
+/* .container {
+  position: relative;
+} */
+
+.box3 {
+  background-color: cornflowerblue;
+}
+
+.box4 {
+  background-color: blue;
+  position: absolute;
+  left: 200px;
+}
+
+.box5 {
+  background-color: black;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+/* p {
+  background-color: beige;
+  position: relative;
+  z-index: 1;
+} */
+
+.box6 {
+  background-color: darkgoldenrod;
+}

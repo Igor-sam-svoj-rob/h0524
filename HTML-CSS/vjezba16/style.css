@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  height: 100vh;
+  background-color: black;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+}
+
+button {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 10px;
+}
+
+input:focus + label,
+input:valid + label,
+textarea:focus + label,
+textarea:valid + label {
+  top: -35px;
+  font-size: 12px;
+}

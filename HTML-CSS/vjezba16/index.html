@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+      integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <form>
+        <div class="row">
+          <div class="input-group">
+            <input type="text" id="name" required />
+            <label for="name"><i class="fa-solid fa-user"></i> Ime</label>
+          </div>
+          <div class="input-group">
+            <input type="tel" id="tel" required />
+            <label for="tel"><i class="fa-solid fa-phone"></i> Broj</label>
+          </div>
+        </div>
+        <div class="input-group">
+          <input type="email" id="email" required />
+          <label for="email"><i class="fa-solid fa-envelope"></i> E-mail</label>
+        </div>
+        <div class="input-group">
+          <textarea name="message" rows="8" required></textarea>
+          <label for="message"><i class="fa-solid fa-comment"></i> Vaša poruka</label>
+        </div>
+        <button type="submit">Pošalji <i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </main>
+  </body>
+</html>

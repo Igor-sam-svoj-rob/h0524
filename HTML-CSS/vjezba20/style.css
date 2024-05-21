@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+
+body {
+  padding: 2rem;
+}
+
+/* Flex grow/shrink */
+nav ul {
+  list-style: none;
+  border: 5px solid green;
+  display: flex;
+}
+
+nav li {
+  border: 5px solid orange;
+  flex-grow: 0; /* Početno stanje ovog svojstva */
+  flex-grow: 1;
+  flex-shrink: 1; /* Početno stanje ovog svojstva */
+  flex-basis: auto; /* Početno stanje ovog svojstva */
+}
+
+nav li {
+  flex: 1; /* Flex grow : 1; Flex shrink : 1; Flex basis: 0; */
+}
+
+/* nav li:nth-child(3) {
+  flex-grow: 5;
+} */
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 2rem;
+}
+
+/* min/max width / overflow */
+
+.box1 {
+  width: 100%;
+  height: 500px;
+  overflow: scroll; /* Ako sadržaj "iscuri" van svog fiksno postavljenog parent elementa, možemo omogućiti da sadržaj ostane unutar tog 
+  parent elementa. Također postoji overflow:hidden; koji će sakriti sve što je "iscurilo" van roditeljskog elementa. */
+  min-width: 400px; /* Širina boxa ne može biti manja od 400px, ali može se povećavati */
+  max-width: 800px; /* Širina boxa se može smanjivati ali ne može biti veća od 800px */
+}

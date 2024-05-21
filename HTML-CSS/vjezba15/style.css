@@ -1,0 +1,153 @@
+/* Generalni reset i body */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: "Saira", sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(./pozadina.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+button {
+  background-color: #ad5750;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 1rem;
+}
+
+header img {
+  width: 150px;
+}
+
+nav,
+nav ul {
+  display: flex;
+  gap: 0.7rem;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav a:hover {
+  color: #ad5750;
+}
+
+nav form {
+  border-bottom: 1px solid #ad5750;
+}
+
+.search_input {
+  background: transparent;
+  border: none;
+  color: #fff;
+}
+
+.search_input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  padding-left: 0.5rem;
+}
+
+.btn {
+  padding: 0.8rem 0.5rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* Main dio */
+
+main {
+  display: flex;
+  padding: 2rem;
+}
+
+h1 {
+  font-family: "Lobster", serif;
+  color: #fff;
+  font-size: 3rem;
+}
+
+h1 mark {
+  background: transparent;
+  color: #ad5750;
+}
+
+main p {
+  color: #fff;
+}
+
+.btn-main {
+  font-size: 1.3rem;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+/* Aside dio */
+
+aside form {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 15px;
+  width: 20rem;
+}
+
+aside h2 {
+  background-color: #fff;
+  text-align: center;
+  color: #ad5750;
+  border-radius: 5px;
+}
+
+aside input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ad5750;
+  font-size: 1rem;
+  margin-top: 3rem;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+aside input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  padding-left: 0.5rem;
+}
+
+.btn-aside {
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem 25% 0;
+}
+
+aside p,
+aside a {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+aside a {
+  text-decoration: none;
+  color: #ad5750;
+}

@@ -1,0 +1,368 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+  outline: none;
+  border: none;
+}
+
+.hor-rule {
+  width: 4rem;
+  height: 4px;
+  background-color: #478ac9;
+  margin: 30px auto;
+}
+
+img {
+  width: 100%;
+}
+
+/* Header - navigacija */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 5rem;
+}
+
+header img {
+  width: 80%;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: black;
+}
+
+nav ul a:hover {
+  color: brown;
+}
+
+/* Sekcija 1 - hero sekcija */
+
+.section1 {
+  background-image: url(./slike/section1-pozadina.png);
+  height: 90vh;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.section1-content {
+  flex-basis: 40%;
+  margin-right: 40%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.btn1 {
+  background-color: #478ac9;
+  color: white;
+  padding: 10px 30px;
+  cursor: pointer;
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
+}
+
+.btn1:hover {
+  background-color: #387cbd;
+  color: #e6e6e6;
+}
+
+/* Sekcija 2 */
+
+.section2 {
+  display: flex;
+}
+
+.section2-content {
+  padding: 15% 0;
+  text-align: center;
+  flex-basis: 100%;
+  background-color: #f1c50e;
+}
+
+.section2-content:nth-child(2) {
+  background-color: #db545a;
+  color: white;
+}
+
+.btn2 {
+  background-color: #adcce9;
+  padding: 10px 30px;
+  margin-top: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* Sekcija 3 i 4 */
+
+.section3,
+.section4 {
+  display: flex;
+  background-color: #2cccc4;
+  padding-left: 2rem;
+}
+
+.section4 {
+  background-color: #f1c50e;
+  padding-left: 0;
+}
+
+.section3-content,
+.section4-content {
+  max-width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section4-content {
+  padding-left: 2rem;
+}
+
+.section3 .hor-rule,
+.section4 .hor-rule {
+  margin-left: 0;
+}
+
+.section3 img,
+.section4 img {
+  max-width: 67%;
+}
+
+.section3 button,
+.section4 button {
+  align-self: flex-start;
+}
+
+/* Sekcija 5 */
+
+.section5 {
+  background-color: #2cccc4;
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+}
+
+/* Sekcija 6 */
+
+.section6 {
+  background-color: #2cccc4;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.section6 img {
+  height: 350px;
+}
+
+.product p:first-of-type {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+.product p:last-of-type {
+  padding: 0.5rem 1rem;
+}
+
+.section7 {
+  background-color: #2cccc4;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+/* Sekcija 8 */
+
+.section8 {
+  background: url(./slike/alien_ruka.png);
+  height: 90vh;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.svg-element {
+  height: 85px;
+  width: 85px;
+  padding: 25px;
+  background-color: #387cbd;
+  border-radius: 50%;
+}
+
+.svg-element svg {
+  fill: #fff;
+}
+
+.section8-content {
+  background-color: #2cccc4;
+  flex-basis: 50%;
+  padding: 4rem;
+  position: relative;
+  bottom: -6rem;
+  right: 10rem;
+  color: #fff;
+}
+
+.section8 .hor-rule {
+  margin-left: 0;
+}
+
+.section8-content p:first-of-type {
+  margin: 2rem 0;
+}
+
+.section8-content mark {
+  background: transparent;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Sekcija 9 */
+
+.section9 {
+  background-color: #db545a;
+  padding-top: 10rem;
+  color: #fff;
+  text-align: center;
+}
+
+.section9 input:first-of-type {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+  width: 20rem;
+}
+
+.section9 input:first-of-type::placeholder {
+  color: #fff;
+}
+
+.section9 .btn1 {
+  font-size: 0.8rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+footer {
+  background-color: #333;
+  text-align: center;
+  padding: 3rem;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+@media all and (max-width: 1400px) {
+  html {
+    font-size: 90%;
+  }
+
+  .section3-content {
+    max-width: 40%;
+  }
+
+  .section3 img {
+    max-width: 60%;
+  }
+}
+
+@media all and (max-width: 1150px) {
+  .section6 img {
+    height: 250px;
+  }
+}
+
+@media all and (max-width: 981px) {
+  .section1,
+  .section8 {
+    height: 60vh;
+  }
+  .section1-content {
+    flex-basis: 80%;
+    margin-right: 0;
+  }
+
+  .section8-content {
+    flex-basis: 70%;
+    right: 0;
+  }
+
+  .section2,
+  .section3,
+  .section4 {
+    flex-direction: column;
+  }
+
+  .section3 {
+    padding-left: 0;
+  }
+
+  .section3-content,
+  .section4-content {
+    max-width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+  }
+
+  .section3 .hor-rule,
+  .section4 .hor-rule {
+    margin: 2rem auto;
+  }
+
+  .section3 button,
+  .section4 button {
+    align-self: center;
+    margin-bottom: 2rem;
+  }
+
+  .section3 img,
+  .section4 img {
+    max-width: 100%;
+  }
+
+  .section4-content {
+    order: -1;
+  }
+
+  .section2-content {
+    padding: 5% 0;
+  }
+}
+
+@media all and (max-width: 850px) {
+  .section6 {
+    flex-wrap: wrap;
+  }
+}
+
+@media all and (max-width: 550px) {
+  .section8-content {
+    padding: 2rem;
+    flex-basis: 100%;
+    bottom: 0;
+    height: 100%;
+    border-top: 1px solid black;
+  }
+}
