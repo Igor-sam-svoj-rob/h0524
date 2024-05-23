@@ -77,13 +77,6 @@ const izracunGodinaJosip = trenutnaGodina - 1999;
 console.log(izracunGodinaMaja, izracunGodinaJosip);
 console.log(izracunGodinaMaja * 2, izracunGodinaJosip / 5);
 
-// Idemo koristeći mat. op. spojiti 2 varijable čije vrijednosti su stringovi.
-
-const ime = "Igor";
-const prezime = "Jevremović";
-
-console.log(ime + " " + prezime);
-
 // USPOREDNI OPERATORI
 
 let y = 10 + 5;
@@ -96,3 +89,65 @@ console.log(y);
 // možemo provjeravati >, <, >= , <=
 console.log(izracunGodinaJosip >= izracunGodinaMaja);
 console.log(izracunGodinaMaja > izracunGodinaJosip);
+
+// Idemo koristeći mat. op. spojiti 2 varijable čije vrijednosti su stringovi.
+
+const ime = "Igor";
+const prezime = "Jevremović";
+
+console.log(ime + " " + prezime);
+
+//STRING LITERAL
+
+const godina = 2024;
+const zanimanje = "učitelj";
+
+const algebra =
+  "Ja sam " + ime + " " + prezime + ", radim kao " + zanimanje + " u godini " + godina + ".";
+
+console.log(algebra);
+
+// TEMPLATE LITERAL
+
+const algebra2 = `Ja sam ${ime} ${prezime}, radim kao ${zanimanje} u godini ${godina}.`;
+console.log(algebra2);
+
+// MATEMATIČKE METODE sa brojevima i varijablama
+
+let z;
+
+// korijen
+z = Math.sqrt(16);
+
+// absolutne vrijednosti
+z = Math.abs(-5);
+
+// zaokruživanje - do pola broja na nižu, preko na višu
+z = Math.round(4.4);
+
+// prisilno zaokruživanje na gore
+z = Math.ceil(5.2);
+
+// prisilno zaokruživanje za dolje
+z = Math.floor(5.8);
+
+// uklanjanje decimalnih brojeva
+z = Math.trunc(5.2);
+
+// min broj iz niza brojeva
+z = Math.min(4, 6, 8, 9, 2);
+
+// max broj iz niza brojeva
+z = Math.max(2, 6, 8, 10);
+
+// random broj
+z = Math.random();
+
+// random broj ako pomnožimo sa 10, dobit ćemo broj između 0 i 9
+z = Math.random() * 10;
+
+// random broj koji ne bi imao decimale i bio bi između 1 i 10
+z = Math.trunc(Math.random() * 10 + 1);
+z = Math.floor(Math.random() * 10 + 1);
+
+console.log(z);
