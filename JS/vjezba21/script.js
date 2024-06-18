@@ -63,3 +63,27 @@ Zadaća - ovaj pristup možemo još refaktorirati. Što kada bi kreiranje ovih e
 korisno prebaciti u svoje funkcije kako bi mogle biti reusane/pozivane na drugim mjestima. Stoga, napravite
 funkciju za svaku kreaciju (buttona/ikone/list itema) i onda kreirajte novi zadatak koristeći višefunkcijski pristup.
 */
+
+function kreirajZadacaZadatak(zadaca) {
+  const li = document.createElement("li");
+  li.innerText = zadaca;
+  const button = napraviButton("ukloni-zadatak btn-link");
+  li.appendChild(button);
+  document.querySelector("#zadatak-list").appendChild(li);
+}
+
+function napraviButton(klase) {
+  const button = document.createElement("button");
+  button.className = klase;
+  const ikona = napraviIkonu("fa-solid fa-xmark");
+  button.appendChild(ikona);
+  return button;
+}
+
+function napraviIkonu(klase) {
+  const ikona = document.createElement("i");
+  ikona.className = klase;
+  return ikona;
+}
+
+kreirajZadacaZadatak("Napiši zadaću");
