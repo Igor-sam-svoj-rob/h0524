@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  line-height: 1.6;
+  padding: 0 40px;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px;
+  background-color: darkgoldenrod;
+  color: white;
+  border-radius: 5px;
+  width: 100px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  padding: 5px;
+  border-radius: 5px;
+  width: 300px;
+  height: 35px;
+  border: 1px #ccc solid;
+  margin-right: 5px;
+}
+
+#todo-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 20px;
+}
+
+#todo-list > div {
+  border: 1px #666 solid;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gotov {
+  text-decoration: line-through;
+  background-color: maroon;
+  color: #fff;
+}

@@ -28,7 +28,7 @@ getData("./filmovi.json", (filmovi) => {
 
 // Idemo ovaj Callback Hell napisati pomoću promisea
 
-function getData(putanja) {
+/* function getData(putanja) {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
 
@@ -64,4 +64,48 @@ getData("./filmovi.json")
   })
   .catch((error) => {
     console.log(error);
+  }); */
+
+//-----------------------------------------------------------------------------------
+
+function getData(putanja) {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+
+    xhr.open("GET", putanja);
+
+    xhr.onreadystatechange = function () {
+      if (this.readyState === 4) {
+        if (this.status === 200) {
+          resolve(JSON.parse(this.response));
+        } else {
+          reject("Dogodila se greška");
+        }
+      }
+    };
+
+    setTimeout(() => {
+      xhr.send();
+    }, Math.floor(Math.random() * 2000) + 100);
+  });
+}
+
+const filmovi = getData("./filmovi.json");
+const glumci = getData("./glumci.json");
+const redatelji = getData("./redatelji.json");
+
+const ispis = new Promise((resolve, reject) => {
+  resolve("Hello World");
+});
+
+/* 
+Promise all metoda nam omogućava da napravimo listu obećanja sa njihovim podacima. ispis i njenu vrijednost smo ododali na kraju...
+*/
+
+Promise.all([filmovi, glumci, redatelji, ispis])
+  .then((podaci) => {
+    console.log(podaci);
+  })
+  .catch((greska) => {
+    console.log(greska);
   });
