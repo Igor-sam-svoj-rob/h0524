@@ -69,9 +69,25 @@ const deleteTodo = (e) => {
   }
 };
 
+const toggleCompleted = (e) => {
+  if (e.target.classList.contains("todo")) {
+    e.target.classList.toggle("gotov");
+    updateTodo(e.target.dataset.id, e.target.classList.contains("gotov"));
+  }
+};
+
+const updateTodo = (id, completed) => {
+  fetch(`${apiURL}/${id}`, {
+    method: "PUT",
+    body: JSON.stringify({ completed }),
+    headers: { "Content-Type": "application/json" },
+  });
+};
+
 const init = () => {
   document.addEventListener("DOMContentLoaded", getTodos);
   document.getElementById("todo-form").addEventListener("submit", createTodo);
+  document.getElementById("todo-list").addEventListener("click", toggleCompleted);
 };
 
 init();
