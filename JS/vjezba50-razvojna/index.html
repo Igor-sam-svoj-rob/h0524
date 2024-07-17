@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>Bootstrap</h1>
+    <h2>Vježba</h2>
+
+    <p class="text-start">Lijevo orijentirani tekst sa klasom text-start.</p>
+    <p class="text-center">Centralno orijentirani tekst sa klasom text-center.</p>
+    <p class="text-end">Desno orijentirani tekst sa klasom text-end.</p>
+
+    <p class="text-decoration-underline fs-1">Podcrtani tekst.</p>
+    <p class="text-decoration-line-through">Prekriženi tekst</p>
+
+    <p class="text-primary bg-warning">Primarna boja teksta</p>
+    <p class="text-secondary">Sekundarna boja teksta</p>
+    <p class="text-info">Lorem ipsum dolor sit amet.</p>
+    <p class="text-warning">Lorem ipsum dolor sit amet.</p>
+    <p class="text-success">Lorem ipsum dolor sit amet.</p>
+    <p class="text-danger">Lorem ipsum dolor sit amet.</p>
+    <p class="text-muted">Lorem ipsum dolor sit amet.</p>
+
+    <!-- buttoni -->
+
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-secondary">btn-secondary</button>
+
+    <!-- padding/margin -->
+    <p class="p-3 bg-primary">Lorem ipsum dolor sit amet.</p>
+
+    <!-- Ako želite svaki smjer posebno odrediti možete pomoću fixeva:
+    ps-1 - padding start 1
+    pt-1 - padding top 1
+    pe-1 - padding end 1
+    pb-1 - padding bottom 1
+    
+    Ako želite horizontalu/vertikalu možete pomoću fixeva:
+    px-1 - padding po horizontali 1
+    py-1 - padding po vertikali 1
+    -->
+
+    <!-- Borders -->
+
+    <span class="border border-primary p-3 d-block">Lorem ipsum dolor sit amet.</span>
+    <span class="border border-secondary p-3 d-block mt-3">Lorem ipsum dolor sit amet.</span>
+
+    <div class="container my-5">
+      <h2>Container</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, harum. Debitis
+        perferendis placeat, sequi temporibus quidem asperiores aperiam quibusdam provident suscipit
+        libero. Totam rerum saepe suscipit asperiores iste quam ad! Incidunt quod omnis explicabo
+        saepe minima commodi perferendis similique illum facere esse molestias non velit, voluptatum
+        ex iusto voluptate totam?s
+      </p>
+    </div>
+
+    <!-- Container-fluid je uvijek 100% -->
+    <div class="container-fluid my-5">
+      <h2>Container Fluid</h2>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo adipisci dolor provident odio
+        ipsa nam eum soluta animi voluptatibus cupiditate, expedita, tempore veritatis corrupti
+        tempora tenetur officia pariatur, fugit accusamus harum voluptates? Vero, distinctio qui.
+        Suscipit necessitatibus esse fugit quia!
+      </p>
+    </div>
+
+    <!-- Kako napraviti container sa 1 redom i 3 jednaka stupca -->
+    <div class="container-xl my-5">
+      <h2>BS Grid</h2>
+      <div class="row">
+        <div class="col">
+          <p class="bg-primary text-light p-3">Stupac 1</p>
+        </div>
+        <div class="col">
+          <p class="bg-primary text-light p-3">Stupac 2</p>
+        </div>
+        <div class="col">
+          <p class="bg-primary text-light p-3">Stupac 3</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Napravite container sa 1 redom i 3 stupca. S time da prvi stupac bude pola grida, a druga 2 stupca četvrtine grida -->
+    <div class="container-xl my-5">
+      <h2>BS Grid</h2>
+      <div class="row">
+        <div class="col-6">
+          <p class="bg-primary text-light p-3">Stupac 1</p>
+        </div>
+        <div class="col-3">
+          <p class="bg-primary text-light p-3">Stupac 2</p>
+        </div>
+        <div class="col-3">
+          <p class="bg-primary text-light p-3">Stupac 3</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Napravite container sa 1 redom i 3 stupca. S time da na širini breakpointa large bude prvi stupac  pola grida, a druga 2 stupca
+     četvrtine grida. A na širini breakpointa small da budu sva 3 jednaka. -->
+    <div class="container-xl my-5">
+      <h2>BS Grid</h2>
+      <div class="row">
+        <div class="col-lg-6 col-sm-4">
+          <p class="bg-primary text-light p-3">Stupac 1</p>
+        </div>
+        <div class="col-lg-3 col-sm-4">
+          <p class="bg-primary text-light p-3">Stupac 2</p>
+        </div>
+        <div class="col-lg-3 col-sm-4">
+          <p class="bg-primary text-light p-3">Stupac 3</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kako koristiti flex svojstva? -->
+
+    <div class="container-xl my-5">
+      <h2>BS Grid Flex</h2>
+      <div class="row justify-content-between">
+        <div class="col-md-3">
+          <p class="bg-primary text-light p-3">Stupac 1</p>
+        </div>
+        <div class="col-md-3">
+          <p class="bg-primary text-light p-3">Stupac 2</p>
+        </div>
+        <div class="col-md-3">
+          <p class="bg-primary text-light p-3">Stupac 3</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gotove komponente -->
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            Ovo je moj naslov
+          </button>
+        </h2>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse show"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">Ovo je sad moj tekst</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo"
+            aria-expanded="false"
+            aria-controls="collapseTwo"
+          >
+            Accordion Item #2
+          </button>
+        </h2>
+        <div
+          id="collapseTwo"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <strong>This is the second item's accordion body.</strong> It is hidden by default,
+            until the collapse plugin adds the appropriate classes that we use to style each
+            element. These classes control the overall appearance, as well as the showing and hiding
+            via CSS transitions. You can modify any of this with custom CSS or overriding our
+            default variables. It's also worth noting that just about any HTML can go within the
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseThree"
+            aria-expanded="false"
+            aria-controls="collapseThree"
+          >
+            Accordion Item #3
+          </button>
+        </h2>
+        <div
+          id="collapseThree"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden by default, until
+            the collapse plugin adds the appropriate classes that we use to style each element.
+            These classes control the overall appearance, as well as the showing and hiding via CSS
+            transitions. You can modify any of this with custom CSS or overriding our default
+            variables. It's also worth noting that just about any HTML can go within the
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
