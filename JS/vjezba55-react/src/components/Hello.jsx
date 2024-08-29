@@ -1,3 +1,3 @@
-export const Hello = () => {
-  return <div>Hello</div>;
+export const Hello = ({ zemlja }) => {
+  return <div>Pozz iz {zemlja}</div>;
 };
