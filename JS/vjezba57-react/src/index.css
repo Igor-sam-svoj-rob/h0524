@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.app input {
+  width: 20rem;
+  margin: 5rem auto;
+  outline: none;
+  padding: 1rem;
+}
+
+.kartice {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
