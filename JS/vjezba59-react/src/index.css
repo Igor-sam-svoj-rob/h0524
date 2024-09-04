@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  font-size: 3rem;
+  background-color: beige;
+}
+
+.card {
+  display: flex;
+  background-color: cornflowerblue;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.rating {
+  background-color: crimson;
+  color: #fff;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  border-radius: 50%;
+  position: relative;
+  top: 1rem;
+  left: 1rem;
+  text-align: center;
+}
+
+.text-display {
+  padding: 1rem;
+}
+
+button {
+  background-color: indianred;
+  position: relative;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  padding: 5px;
+  bottom: 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.lista-kartica {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+  margin: 5rem auto;
+  justify-items: center;
+  gap: 5rem;
+}
+
+.flip {
+  background-color: beige;
+  color: #000;
+}
