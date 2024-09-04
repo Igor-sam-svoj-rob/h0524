@@ -9,7 +9,7 @@ const App = () => {
   return (
     <>
       <Form inputText={inputText} setInputText={setInputText} todos={todos} setTodos={setTodos} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} setTodos={setTodos} />
     </>
   );
 };
