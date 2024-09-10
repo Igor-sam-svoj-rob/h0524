@@ -1,4 +1,8 @@
-const Stats = ({ kartica }) => {
+import { useContext } from "react";
+import Context from "../Context/Context";
+
+const Stats = () => {
+  const { kartica } = useContext(Context);
   let prosjek =
     kartica.reduce((suma, trenutnaVrijednost) => {
       return suma + trenutnaVrijednost.rating;

@@ -1,7 +1,11 @@
 import Card from "../shared/Card";
 import { FaTimes } from "react-icons/fa";
+import { useContext } from "react";
+import Context from "../Context/Context";
 
-const StiliziraneKartice = ({ item, handleDelete }) => {
+const StiliziraneKartice = ({ item }) => {
+  const { handleDelete } = useContext(Context);
+
   const handleClick = () => {
     handleDelete(item.id);
   };

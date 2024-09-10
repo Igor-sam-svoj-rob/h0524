@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import Context from "../Context/Context";
 import Card from "../shared/Card";
 import Button from "../shared/Button";
 import Rating from "./Rating";
 
-const KarticaForma = ({ handleFeedback }) => {
+const KarticaForma = () => {
+  const { handleFeedback } = useContext(Context);
   const [text, setText] = useState("");
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [poruka, setPoruka] = useState("");
