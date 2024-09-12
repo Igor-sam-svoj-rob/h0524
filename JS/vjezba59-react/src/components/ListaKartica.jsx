@@ -1,13 +1,17 @@
 import StiliziraneKartice from "./StiliziraneKartice";
 import { useContext } from "react";
 import Context from "../Context/Context";
+import Spinner from "../shared/Spinner";
 
 const ListaKartica = () => {
-  const { kartica } = useContext(Context);
-  if (!kartica || kartica.length === 0) {
+  const { kartica, isLoading } = useContext(Context);
+  if (!isLoading && (!kartica || kartica.length === 0)) {
     return <p>Nema sadržaja</p>;
   }
-  return (
+
+  return isLoading ? (
+    <Spinner />
+  ) : (
     <div className="lista-kartica">
       {kartica.map((item) => (
         <StiliziraneKartice item={item} key={item.id} />

@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
+import Context from "../Context/Context";
 
 const Rating = ({ odabran }) => {
   const [odabrano, setOdabrano] = useState(1);
+  const { editKartica } = useContext(Context);
   const handleChange = (e) => {
     setOdabrano(+e.target.value);
     odabran(+e.target.value);
   };
+
+  useEffect(() => {
+    setOdabrano(editKartica.kartica.rating);
+  }, [editKartica]);
 
   return (
     <ul className="ocjena">

@@ -1,15 +1,24 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import Context from "../Context/Context";
 import Card from "../shared/Card";
 import Button from "../shared/Button";
 import Rating from "./Rating";
 
 const KarticaForma = () => {
-  const { handleFeedback } = useContext(Context);
+  const { handleFeedback, editKartica, updateFeedback } = useContext(Context);
   const [text, setText] = useState("");
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [poruka, setPoruka] = useState("");
   const [rating, setRating] = useState(1);
+
+  useEffect(() => {
+    if (editKartica.edit === true) {
+      setBtnDisabled(false);
+      setText(editKartica.kartica.text);
+      setRating(editKartica.kartica.rating);
+    }
+  }, [editKartica]);
+
   const handleTextChange = (event) => {
     const provjera = event.target.value;
     setText(provjera);
@@ -32,7 +41,12 @@ const KarticaForma = () => {
       rating,
     };
 
-    handleFeedback(noviUnos);
+    if (editKartica.edit === true) {
+      updateFeedback(editKartica.kartica.id, noviUnos);
+    } else {
+      handleFeedback(noviUnos);
+    }
+
     setText("");
   };
 
