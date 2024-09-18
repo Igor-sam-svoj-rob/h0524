@@ -3,7 +3,7 @@ import GithubContext from "../context/GithubContext";
 
 const UserSearch = () => {
   const [text, setText] = useState("");
-  const { users } = useContext(GithubContext);
+  const { users, fetchUsers, clearUsers } = useContext(GithubContext);
   const handleChange = (event) => {
     setText(event.target.value);
   };
@@ -14,6 +14,7 @@ const UserSearch = () => {
     if (text === "") {
       alert("Molimo unesite nešto u polje");
     } else {
+      fetchUsers(text);
       setText("");
     }
   };
@@ -35,7 +36,9 @@ const UserSearch = () => {
         </form>
         {users.length > 0 && (
           <div className="flex justify-start">
-            <button className="bg-red-900 text-white py-4 px-2 rounded-md">Resetiraj</button>
+            <button className="bg-red-900 text-white py-4 px-2 rounded-md" onClick={clearUsers}>
+              Resetiraj
+            </button>
           </div>
         )}
       </div>
