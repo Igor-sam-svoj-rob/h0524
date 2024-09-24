@@ -1,20 +1,15 @@
 import { FaEdit, FaTrash } from "react-icons/fa";
 import Button from "../shared/Button";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { deleteUser } from "../redux/UserSlice";
 
 const UserList = () => {
-  const users = [
-    {
-      id: "1",
-      ime: "Igor",
-      email: "example@example.com",
-    },
-    {
-      id: "2",
-      ime: "Ivan",
-      email: "test@test.com",
-    },
-  ];
+  const users = useSelector((store) => store.users);
+  const dispatch = useDispatch();
+  const removeUser = (id) => {
+    dispatch(deleteUser({ id }));
+  };
 
   const renderCard = () =>
     users.map((user) => (
@@ -26,7 +21,7 @@ const UserList = () => {
             <FaEdit />
           </Link>
 
-          <FaTrash />
+          <FaTrash onClick={() => removeUser(user.id)} />
         </div>
       </div>
     ));

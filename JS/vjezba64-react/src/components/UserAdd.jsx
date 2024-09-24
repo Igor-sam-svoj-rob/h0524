@@ -2,9 +2,13 @@ import { useState } from "react";
 import Button from "../shared/Button";
 import TextInput from "../shared/TextInput";
 import { useNavigate } from "react-router-dom";
+import { addUser } from "../redux/UserSlice";
+import { useDispatch } from "react-redux";
+import { v4 as uuidv4 } from "uuid";
 
 const UserAdd = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [podaci, setPodaci] = useState({
     ime: "",
     email: "",
@@ -12,6 +16,13 @@ const UserAdd = () => {
 
   const handleAddUser = () => {
     setPodaci({ ime: "", email: "" });
+    dispatch(
+      addUser({
+        id: uuidv4(),
+        ime: podaci.ime,
+        email: podaci.email,
+      })
+    );
     navigate("/");
   };
 
